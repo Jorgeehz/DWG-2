@@ -52,7 +52,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(array("message" => "Se requiere un ID para leer un like"));
     }
 } elseif ($_SERVER['REQUEST_METHOD'] === 'PUT') {
-    // UPDATE
     $data = json_decode(file_get_contents('php://input'), true);
 
     $id = $data['id'];
